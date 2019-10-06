@@ -1,20 +1,3 @@
-/*
-Copyright 2019 Rodrigo Feijao <hello@rodrigofeijao.com>
-
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 2 of the License, or
-(at your option) any later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License
-along with this program. If not, see <http://www.gnu.org/licenses/>.
-*/
-
 #pragma once
 
 #include "config_common.h"
@@ -23,9 +6,9 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 #define VENDOR_ID       0xFEED
 #define PRODUCT_ID      0x6363
 #define DEVICE_VER      0x0001
-#define MANUFACTURER    XIUDI
-#define PRODUCT         XD60rev3
-#define DESCRIPTION     XD60 rev3 Keyboard PCB by XIUDI
+#define MANUFACTURER    Something
+#define PRODUCT         Mod60
+#define DESCRIPTION     Mod60 Keyboard PCBs
 
 /* key matrix size */
 #define MATRIX_ROWS 5
@@ -41,12 +24,12 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
  *         ROW2COL = ROW = Anode (+), COL = Cathode (-, marked on diode)
  *
 */
-#define MATRIX_ROW_PINS { D0, D1, D2, D3, D5 }
-#define MATRIX_COL_PINS { F0, F1, E6, C7, C6, B6, D4, B1, B7, B5, B4, D7, D6, B3 }
+#define MATRIX_ROW_PINS { B1, B2, B3, F0, F1 }
+#define MATRIX_COL_PINS { F4, F7, F5, F6, C7, C6, B6, B5, B4, D7, D6, D5, D4, D3 }
 #define UNUSED_PINS
 
 /* Backlight Setup */
-#define BACKLIGHT_PIN F5
+#define BACKLIGHT_PIN B7
 #define BACKLIGHT_LEVELS 6
 
 /* COL2ROW or ROW2COL */
@@ -58,9 +41,9 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 /* RGB Underglow
  * F6 PIN for XD60v3 that has pre-soldered LEDs
  */
-#define RGB_DI_PIN F6
+#define RGB_DI_PIN D2
 #define RGBLIGHT_ANIMATIONS
-#define RGBLED_NUM 28
+#define RGBLED_NUM 14
 #define RGBLIGHT_HUE_STEP 10
 #define RGBLIGHT_SAT_STEP 17
 #define RGBLIGHT_VAL_STEP 17
