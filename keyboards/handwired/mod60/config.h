@@ -10,8 +10,11 @@
 #define PRODUCT         Mod60
 #define DESCRIPTION     Mod60 Keyboard PCBs
 
+/* split details */
+#define USE_I2C
+
 /* key matrix size */
-#define MATRIX_ROWS 5
+#define MATRIX_ROWS 10 // Doubled for split
 #define MATRIX_COLS 14
 
 /*
@@ -24,8 +27,12 @@
  *         ROW2COL = ROW = Anode (+), COL = Cathode (-, marked on diode)
  *
 */
+/* Mod 60 wiring */
 #define MATRIX_ROW_PINS { B1, B2, B3, F0, F1 }
 #define MATRIX_COL_PINS { F4, F7, F5, F6, C7, C6, B6, B5, B4, D7, D6, D4, D5, D3 }
+/* Soyuz wiring */
+#define MATRIX_ROW_PINS_RIGHT { D4, C6, B6, E6, B4 }
+#define MATRIX_COL_PINS_RIGHT { F4, B3, D7, B5 }
 #define UNUSED_PINS
 
 /* Backlight Setup */
@@ -39,7 +46,6 @@
 #define DEBOUNCE 5
 
 /* RGB Underglow
- * F6 PIN for XD60v3 that has pre-soldered LEDs
  */
 #define RGB_DI_PIN D2
 #define RGBLIGHT_ANIMATIONS
